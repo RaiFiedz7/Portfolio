@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+
+    	 <style>
+            body {
+                background-color: lightblue;
+                font-family:"Verdana", sans-serif;
+                color:darkslategray;
+            }
+        </style>
+
+</head>
+<body>
+<!-- Simple Navigation -->
+<div>
+    <h2>
+        <a href="#home" onclick="showHome()">Home</a> |
+        <a href="#about" onclick="showAbout()">About</a>
+    </h2>
+</div>
+
+
+<center>
+<hr>
+
+<!-- 2-Column Layout -->
+<table>
+    <tr>
+    <div id="home" style="display:block; margin-top:20px;">
+        <!-- LEFT COLUMN -->
+        <td>
+            <div>
+                <img src="fiedalan.jfif" height="200px" width="200px">
+            </div>
+        </td>
+        <td>
+                <h2>Raina Philana C. Fiedalan</h2>
+                <span>BSIT-MI Student</span>
+                   <p>Hi! I am a student in NU-Fairview! Section IT247, at your service!</p>
+            </div>
+		</td>
+	</tr>
+
+<tr>
+<div id="about" style="display:block; margin-top:20px;">
+<td>   
+            <hr>
+            <div>
+                <h3>Contact Information</h3>
+                <p>Email: fiedalanrc@student.nu-fairview.edu.ph</p>
+                <p>Number: +63 912 345 6789</p>
+            </div>
+
+            <hr>
+            <div>
+                <h3>Language/Coding Skills</h3>
+                <dl>
+                    <dt>Frontend</dt>
+                    <dd>HTML</dd>
+                    <dd>CSS</dd>
+                    <dd>JavaScript</dd>
+
+                    <dt>Backend</dt>
+                    <dd>MySQl</dd>
+                    <dd>Python</dd>
+                    <dd>C#</dd>
+                </dl>
+            </div>
+
+            <hr>
+            <div>
+                <h3>Experience/Achievements</h3>
+                <dl>
+                    <dt>Outsystem Service Studio</dt>
+                    <dd>UI</dd>
+                    <dd>Logic</dd>
+                    <dd>Database</dd>
+                </dl>
+            </div>
+
+            <td>
+            <hr>
+            <div>
+                <h2>Questions?</h2>
+            </div>
+
+            <div>
+                <h2>Message down below!</h2>
+                <form action="submit" method="post">
+                    <p>
+                        Name:<br><input type="text" name="name">
+                    </p>
+                    <p>
+                        Email:<br><input type="email" name="email">
+                    </p>
+                    <p>
+                        <input type="submit" value="Send">
+                    </p>
+                </form>
+            </div>
+        </td>
+</td>
+</div>
+</tr>
+</table>
+</center>
+
+<script>
+	function showHome() {
+		document.getElementById("home").style.display = "block";
+		document.getElementById("about").style.display = "none";
+	}
+
+	function showAbout() {
+		document.getElementById("about").style.display = "block";
+		document.getElementById("home").style.display = "none";
+	}
+</script>
+
+<hr>
+
+<!-- FOOTER -->
+<div>
+    <p><center><strong>WebProgramming 2025</strong></center></p>
+</div>
+
+</body>
+</html>

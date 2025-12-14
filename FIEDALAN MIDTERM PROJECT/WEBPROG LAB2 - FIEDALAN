@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>My Profile</title>
+</head>
+<body>
+<!-- Simple Navigation -->
+<div>
+    <h2>
+        <a href="#home" onclick="showHome()" style="margin-left">Home</a> |
+        <a href="#about" onclick="showAbout()" style="margin-left">About</a>
+    </h2>
+</div>
+
+
+<center>
+<table>
+    <tr>
+        <colgroup>
+            <col class="first-col">
+            <col class="second-col">
+        </colgroup>
+
+        <!-- LEFT IMAGE COLUMN -->
+        <td class="profile-column">
+            <h2 class="title-center">Raina Philana C. Fiedalan</h2>
+            <div class="subtitle"><b><i>BSIT-MI Student</i></b></div>
+        </td>
+
+        <!-- RIGHT COLUMN WITH GRADIENT + SPACING + INFO BAR -->
+        <td class="right-box">
+            <div class="right-inner">
+
+                <div class="text-gradient">
+                    <p>Hi! My name is Raina, and I am a 2nd year IT student specializing in Mobile and Internet Technology at National University Fairview.</p>
+
+                    <p>This portfolio is a curated collection of my work, highlighting my experiences in front-end and back-end development using various languages, with the aim to learn more about the IT industry and improve my skills towards the languages being used. I am actively seeking a position where I can contribute my skills and grow as a student as well as for my career while having fun in it.</p>
+                </div>
+
+                <hr>
+                <h3 class="title-center">Contact Information</h3>
+
+                <div class="info-bar">
+                    <div class="info-item">📅 Birthday: Jan 1, 200X</div>
+                    <div class="info-item">📍 Location: Quezon City</div>
+                    <div class="info-item">📞 +63 912 345 6789</div>
+                </div>
+            </div>
+        </td>
+
+    </tr>
+</table>
+</center>
+
+
+<center>
+<table>
+    <colgroup>
+        <col class="third-col">
+        <col class="fourth-col">
+    </colgroup>
+<tr>
+<div id="about" style="display:block; margin-top:20px;">
+<td>
+
+            <hr>
+            <div>
+                <h3>Language/Coding Skills</h3>
+                <dl>
+                    <dt>Frontend</dt>
+                    <dd>HTML</dd>
+                    <dd>CSS</dd>
+                    <dd>JavaScript</dd>
+
+                    <dt>Backend</dt>
+                    <dd>MySQl</dd>
+                    <dd>Python</dd>
+                    <dd>C#</dd>
+                </dl>
+            </div>
+</td>
+
+<td>
+            <hr>
+            
+    <div>
+                <h3>Experience/Achievements</h3>
+                <dl>
+                    <dt>Outsystem Service Studio</dt>
+                    <dd>UI and Designing</dd>
+                    <dd>Logic of the System</dd>
+                    <dd>Saving of Database</dd>
+                </dl>
+            </div>
+</td>
+
+</table>
+
+            <hr>
+            <div>
+                <h3>Contact Information</h3>
+                <p>Email: fiedalanrc@student.nu-fairview.edu.ph</p>
+                <p>Number: +63 912 345 6789</p>
+            </div>
+
+            <td>
+            <hr>
+            <div>
+                <h2>Questions?</h2>
+            </div>
+
+            <div>
+                <h2>Message down below!</h2>
+                <form action="submit" method="post">
+                    <p>
+                        Name:<br><input type="text" name="name" class="message-form">
+                    </p>
+
+                    <p>
+                        Email:<br><input type="email" name="email" class="message-form">
+                    </p>
+
+                    <p>
+                        Message:<br><input type="message" name="message" class="message-form">
+                    </p>
+
+                    <p>
+                        <input type="submit" value="Send">
+                    </p>
+
+                </form>
+            </div>
+        </td>
+</td>
+</center>
+
+<script>
+	function showHome() {
+		document.getElementById("home").style.display = "block";
+		document.getElementById("about").style.display = "none";
+	}
+
+	function showAbout() {
+		document.getElementById("about").style.display = "block";
+		document.getElementById("home").style.display = "none";
+	}
+</script>
+
+<hr>
+
+<!-- FOOTER -->
+<div>
+    <p><center><strong>WebProgramming 2025</strong></center></p>
+</div>
+
+</body>
+</html>

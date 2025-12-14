@@ -1,0 +1,363 @@
+:root {
+    /* default theme */
+    --text-color: saddlebrown;
+    --page-bg: #F6EFE7;
+    --header-footer-bg: #E09789;
+    --bio-card-bg: #E9F1EF;
+    --contact-card-bg: #DDEAD1;
+     --card-bg: #E9F1EF;
+    --fixed-card-bg: #E9F1EF;
+    --btn-bg: #A3D39C;
+    --btn-text: #4A4A4A;
+    --btn-hover-bg: #8CBB85;
+    --nav-gradient-start: #F9B3A7;
+    --nav-gradient-end: #FCD5CE;
+}
+
+body {
+    background-color: var(--page-bg);
+    color: var(--text-color);
+    font-family: "Segoe UI", "Trebuchet MS", Verdana, sans-serif;
+    margin: 0;
+}
+* {
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.header-section {
+    background-color: var(--header-footer-bg);
+    padding: 15px;
+}
+
+.footer-section {
+    background-color: var(--header-footer-bg);
+    padding: 10px;
+}
+
+/*NAV*/
+.nav {
+    position: relative;
+}
+
+.nav a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0 23px;
+    z-index: 1;
+    color: var(--text-color);
+        transition:
+        color 0.3s ease;
+}
+
+/*navfx*/
+.nav span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 100%;
+    border-radius: 50px;
+    background: linear-gradient(45deg, var(--nav-gradient-start), var(--nav-gradient-end));
+    transition: left 2s ease-in-out;
+    z-index: 0;
+}
+
+.nav a:nth-child(1):hover ~ span { left: 0; }
+
+.nav a:nth-child(2):hover ~ span { left: 115px;}
+
+.nav a:nth-child(3):hover ~ span { left: 230px;}
+
+.nav a:nth-child(4):hover ~ span {  left: 345px;}
+
+.nav a:nth-child(5):hover ~ span {left: 455px;}
+
+/* DRPDWN*/
+.dropbtn {
+  background-color: white;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 15px;
+  boRDER: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus { background-color: antiquewhite;}
+
+.dropdown {
+  float: right;
+  position: relative;
+  top: -38px;
+  margin-right: 35px;
+}
+
+.dropdown-content {
+  padding-right: 0px;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 0;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.dropdown-content h4 {
+    color: black;
+    font-size: 15px;
+    text-align: center;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd; border-radius: 15px;}
+
+.show {display: block;}
+
+/*cards*/
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    color: var(--text-color);
+}
+
+.contact-card {
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #DDEAD1;
+    background-color: var(--contact-card-bg);
+    color: var(--text-color);
+
+}
+
+.soft-card {
+    width: 420px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+}
+
+.proj-card {
+    background-color: #E9F1EF;
+    color: saddlebrown;
+}
+
+.card,
+.soft-card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+.proj-card {
+    background-color: var(--fixed-card-bg);
+    color: var(--text-color);
+}
+
+.card.bio-card {
+    background-color: var(--bio-card-bg);
+    color: var(--text-color);
+}
+
+
+html[data-theme="night"] {
+    --text-color: #FFFFFF;
+    --card-bg: #1C1C1C;
+    --fixed-card-bg: #222222;
+}
+
+
+/* imgs*/
+.profile-column {
+    height: 310px;
+    color: white;
+    padding-bottom: 20px;
+    border-radius: 15px;
+
+    /* Background Properties */
+    background-image: url("FIEDALAN.jpg");
+    background-size: cover;
+    background-position: center;
+
+    /* Flex Layout for Content Positioning */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.project-column {
+    height: 300px;
+    width: 300px;
+    background-image: url("pic1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* tbl*/
+
+table {
+    width: 70%;
+    border-collapse: separate;
+    border-spacing: 14px 3px; /* horizontal, vertical */
+}
+
+td {
+    border: none;
+    vertical-align: top;
+}
+
+/* experience*/
+
+.exp-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.exp-left {
+    width: 35%;
+    text-align: center;
+}
+
+.exp-right {
+    width: 65%;
+}
+
+.exp-gray {
+    color: #B4BCC2;
+}
+
+/* skills*/
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.skills-group {
+    text-align: left;
+}
+
+.skills-group dt {
+    font-weight: medium;
+    margin-bottom: 5px;
+}
+
+.skills-footer {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/* texts*/
+.title-center {
+    text-align: center;
+    margin: 10px 0;
+    white-space: nowrap;
+}
+
+.title-left {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.left-text {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.right-text {
+    text-align: right;
+    margin-left: 10px;
+}
+
+.bio-text {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: medium;
+}
+
+.contact-line {
+    text-align: center;
+    font-weight: light;
+}
+
+.bio-wrapper {
+    flex-grow: 1;
+    padding-bottom: 0;
+}
+
+/*form*/
+.message-form {
+    width: 95%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+textarea.message-form {
+    height: 100px;
+}
+
+.button-container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: right;
+}
+
+/*btn */
+input[type="submit"] {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+input[type="submit"]:hover { background-color: var(--btn-hover-bg); }
+
+
+/*notif*/
+.sent-notification {
+    display: none;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: var(--btn-bg);
+    color: var(--text);
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
